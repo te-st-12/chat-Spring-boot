@@ -13,6 +13,7 @@ description = "chat application"
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
+        vendor.set(JvmVendorSpec.ADOPTOPENJDK)
     }
 }
 
