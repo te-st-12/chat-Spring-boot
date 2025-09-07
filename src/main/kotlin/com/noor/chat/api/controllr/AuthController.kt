@@ -1,6 +1,7 @@
 package com.noor.chat.api.controllr
 
 import com.noor.chat.api.dto.AuthResponse
+import com.noor.chat.api.dto.SignupRequest
 import com.noor.chat.service.AuthService
 import io.swagger.v3.oas.annotations.tags.Tag
 import jakarta.validation.Valid
@@ -18,7 +19,7 @@ class AuthController(
 ) {
 
     @PostMapping("/signup")
-    fun signup(@RequestBody @Valid name : String): ResponseEntity<AuthResponse> =
-        ResponseEntity.ok(authService.signup(name))
+    fun signup(@RequestBody @Valid signupRequest : SignupRequest): ResponseEntity<AuthResponse> =
+        ResponseEntity.ok(authService.signup(signupRequest.name))
 
 }
