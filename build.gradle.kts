@@ -10,13 +10,6 @@ group = "com.noor"
 version = "0.0.1-SNAPSHOT"
 description = "chat application"
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-        vendor.set(JvmVendorSpec.ADOPTOPENJDK)
-    }
-}
-
 repositories {
     mavenCentral()
 }
