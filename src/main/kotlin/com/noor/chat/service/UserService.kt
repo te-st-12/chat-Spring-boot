@@ -9,4 +9,7 @@ class UserService(private val authRepository: AuthRepository) {
     fun getAllUsers(): List<User> {
         return authRepository.findAll()
     }
+    fun addUsers(users : List<User>){
+        authRepository.saveAll(users)
+    }
 }
