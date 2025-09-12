@@ -16,7 +16,7 @@ class UserController(private val userService: UserService) {
     fun getAllUsers(): List<User> = userService.getAllUsers()
 
     @PostMapping
-    fun addUsers(@RequestBody users: List<User>) {
-        userService.addUsers(users)
+    fun addUsers(@RequestBody contacts: List<String>) {
+        userService.addUsers(contacts.map { User(UUID.randomUUID(),name = it) })
     }
 }
