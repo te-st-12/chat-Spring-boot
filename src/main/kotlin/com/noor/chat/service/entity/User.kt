@@ -2,6 +2,7 @@ package com.noor.chat.service.entity
 
 import java.util.Date
 import jakarta.persistence.*
+import java.util.UUID
 
 @Entity
 @Table(name = "users")
