@@ -12,7 +12,6 @@ class UserService(private val authRepository: AuthRepository) {
     fun addUsers(users : List<User>){
         authRepository.saveAll(users)
     }
-    @DeleteMapping
     fun clearUsers() {
         authRepository.deleteAll()
     }
