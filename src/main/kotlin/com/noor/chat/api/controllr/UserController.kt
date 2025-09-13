@@ -20,4 +20,8 @@ class UserController(private val userService: UserService) {
     fun addUsers(@RequestBody contacts: List<String>) {
         userService.addUsers(contacts.map { User(UUID.randomUUID(),name = it) })
     }
+    @DeleteMapping
+fun clearUsers() {
+    userService.clearUsers()
+}
 }
